@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>سنابل | Sanaabel Fast Food</title>
+  <meta name="description" content="سنابل - شاورما، برجر، ودجاج طازج بأجود المكونات. اطلب الآن عبر واتساب واستلم وجبتك ساخنة لباب بيتك." />
+  <meta property="og:title" content="سنابل | Sanaabel Fast Food" />
+  <meta property="og:description" content="شاورما · برجر · وجبات سريعة بأجود المكونات الطازجة" />
+  <meta property="og:type" content="restaurant.menu" />
+  <meta name="theme-color" content="#121212" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌾</text></svg>" />
+  <script>if(localStorage.getItem('promoClosed')==='1'){document.documentElement.classList.add('promo-dismissed')}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- PROMO BAR -->
+  <div class="promo-bar" id="promoBar">
+    <p>🔥 عرض اليوم: خصم <strong>15٪</strong> على الطلبات عبر واتساب — <a href="https://wa.me/966500000000" target="_blank">اطلب الآن!</a></p>
+    <button class="promo-close" id="promoClose" aria-label="إغلاق العرض">✕</button>
+  </div>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="logo">
+        <div class="logo-icon">🌾</div>
+        <div class="logo-text">
+          <span class="logo-ar">سنابل</span>
+          <span class="logo-en">SANAABEL</span>
+        </div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#menu">القائمة</a></li>
+        <li><a href="#popular">الأكثر طلباً</a></li>
+        <li><a href="#offers">العروض</a></li>
+        <li><a href="#gallery">المعرض</a></li>
+        <li><a href="#reviews">آراء العملاء</a></li>
+        <li><a href="#contact">اطلب الآن</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="فتح القائمة">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?w=1920&h=1080&fit=crop&q=85&auto=format" alt="شاورما سنابل" class="hero-img" />
+      <div class="hero-overlay"></div>
+      <div class="hero-smoke"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-top-row">
+        <div class="hero-tag" data-aos="fade-down" data-aos-delay="100">🌾 طازج · لذيذ · أصيل</div>
+        <div class="status-badge" id="statusBadge">
+          <span class="status-dot"></span>
+          <span id="statusText">مفتوح الآن</span>
+        </div>
+      </div>
+      <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
+        <span class="line-accent">نكهة</span>
+        <span class="line-main">لا تُنسى</span>
+        <span class="line-sub">في كل لقمة</span>
+      </h1>
+      <p class="hero-sub" data-aos="fade-up" data-aos-delay="300">شاورما · برجر · وجبات سريعة بأجود المكونات الطازجة — تجربة طعام لا مثيل لها</p>
+      <div class="hero-actions" data-aos="fade-up" data-aos-delay="400">
+        <a href="https://wa.me/966500000000" class="btn-primary btn-wa" target="_blank">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.553 4.122 1.523 5.855L0 24l6.335-1.493A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.371l-.359-.213-3.72.876.942-3.626-.234-.372A9.818 9.818 0 1112 21.818z"/></svg>
+          اطلب الآن
+        </a>
+        <a href="#menu" class="btn-ghost">تصفح القائمة ←</a>
+      </div>
+      <div class="hero-trust" data-aos="fade-up" data-aos-delay="500">
+        <div class="trust-item">
+          <strong>4.9 ★</strong><span>تقييم العملاء</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <strong>+50K</strong><span>طلب مكتمل</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <strong>+8</strong><span>سنوات خبرة</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint">↓</div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-box" data-aos="zoom-in" data-aos-delay="0">
+          <span class="stat-num"><span class="counter" data-target="50000">0</span>+</span>
+          <span class="stat-label">طلب مكتمل</span>
+        </div>
+        <div class="stat-box" data-aos="zoom-in" data-aos-delay="100">
+          <span class="stat-num"><span class="counter" data-target="20000">0</span>+</span>
+          <span class="stat-label">عميل سعيد</span>
+        </div>
+        <div class="stat-box" data-aos="zoom-in" data-aos-delay="200">
+          <span class="stat-num">4.9 ★</span>
+          <span class="stat-label">تقييم متوسط</span>
+        </div>
+        <div class="stat-box" data-aos="zoom-in" data-aos-delay="300">
+          <span class="stat-num"><span class="counter" data-target="8">0</span>+</span>
+          <span class="stat-label">سنوات خبرة</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="eyebrow">قائمة الطعام</span>
+        <h2 class="section-title">اختر وجبتك</h2>
+        <p class="section-sub">أشهى الأصناف بمكونات طازجة يومياً</p>
+      </div>
+      <div class="tabs" id="tabs">
+        <button class="tab active" data-cat="shawarma">🌯 شاورما</button>
+        <button class="tab" data-cat="burgers">🍔 برجر</button>
+        <button class="tab" data-cat="chicken">🍗 دجاج</button>
+        <button class="tab" data-cat="sides">🍟 إضافات</button>
+        <button class="tab" data-cat="combos">🎯 وجبات</button>
+      </div>
+      <div class="menu-grid" id="menuGrid"></div>
+    </div>
+  </section>
+
+  <!-- POPULAR -->
+  <section class="popular-section" id="popular">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="eyebrow">⭐ الأكثر مبيعاً</span>
+        <h2 class="section-title">الأكثر طلباً</h2>
+        <p class="section-sub">الأصناف الأكثر حباً عند عملائنا</p>
+      </div>
+      <div class="popular-grid" id="popularGrid"></div>
+    </div>
+  </section>
+
+  <!-- OFFERS -->
+  <section class="offers-section" id="offers">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="eyebrow">🔥 عروض حصرية</span>
+        <h2 class="section-title">العروض الخاصة</h2>
+        <p class="section-sub">لا تفوت أفضل العروض اليومية</p>
+      </div>
+      <div class="offers-slider" id="offersSlider">
+        <div class="offer-card" data-aos="fade-right">
+          <div class="offer-badge">-25%</div>
+          <div class="offer-emoji">🌯</div>
+          <div class="offer-content">
+            <h3>عرض الشاورما</h3>
+            <p>خصم 25٪ على جميع أصناف الشاورما اليوم فقط</p>
+            <div class="offer-timer" data-hours="23" data-mins="59" data-secs="59"></div>
+            <a href="https://wa.me/966500000000?text=أريد الاستفادة من عرض الشاورما" target="_blank" class="btn-primary">استفد من العرض</a>
+          </div>
+        </div>
+        <div class="offer-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="offer-badge">وجبة عائلية</div>
+          <div class="offer-emoji">👨‍👩‍👧‍👦</div>
+          <div class="offer-content">
+            <h3>وجبة العائلة</h3>
+            <p>شاورمتين + برجرين + بطاطس كبيرة بسعر خاص</p>
+            <div class="offer-price"><span class="old-price">60 ر.س</span> <span class="new-price">45 ر.س</span></div>
+            <a href="https://wa.me/966500000000?text=أريد وجبة العائلة" target="_blank" class="btn-primary">اطلب الآن</a>
+          </div>
+        </div>
+        <div class="offer-card" data-aos="fade-left" data-aos-delay="200">
+          <div class="offer-badge">نهاية الأسبوع</div>
+          <div class="offer-emoji">🎉</div>
+          <div class="offer-content">
+            <h3>عرض الويكند</h3>
+            <p>اطلب 3 وجبات واحصل على المشروبات مجاناً</p>
+            <div class="offer-price"><span class="new-price">الخميس والجمعة فقط</span></div>
+            <a href="https://wa.me/966500000000?text=أريد عرض الويكند" target="_blank" class="btn-primary">اطلب الآن</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="eyebrow">لقطات شهية</span>
+        <h2 class="section-title">من مطبخنا إلى طبقك</h2>
+        <p class="section-sub">جودة تشاهدها بعينك قبل أن تتذوقها</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item large" data-aos="zoom-in">
+          <img src="https://images.unsplash.com/photo-1571407970349-bc81e71e9a7e?w=700&h=500&fit=crop&q=80&auto=format" alt="شاورما مكس" loading="lazy" />
+          <div class="gallery-overlay"><span>شاورما مكس</span></div>
+        </div>
+        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="80">
+          <img src="https://images.unsplash.com/photo-1586816001966-08807d059c7d?w=500&h=400&fit=crop&q=80&auto=format" alt="برجر دبل" loading="lazy" />
+          <div class="gallery-overlay"><span>برجر دبل</span></div>
+        </div>
+        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="160">
+          <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c3?w=500&h=400&fit=crop&q=80&auto=format" alt="دجاج مشوي" loading="lazy" />
+          <div class="gallery-overlay"><span>دجاج مشوي</span></div>
+        </div>
+        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="240">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=500&h=400&fit=crop&q=80&auto=format" alt="بطاطس بالجبن" loading="lazy" />
+          <div class="gallery-overlay"><span>بطاطس بالجبن</span></div>
+        </div>
+        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="320">
+          <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=500&h=400&fit=crop&q=80&auto=format" alt="وجبة كودو" loading="lazy" />
+          <div class="gallery-overlay"><span>وجبة كودو</span></div>
+        </div>
+        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+          <img src="https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?w=500&h=400&fit=crop&q=80&auto=format" alt="حلقات بصل" loading="lazy" />
+          <div class="gallery-overlay"><span>حلقات بصل</span></div>
+        </div>
+      </div>
+      <!-- LIGHTBOX -->
+      <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">✕</button>
+        <img id="lightboxImg" src="" alt="" />
+        <p id="lightboxCaption"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="why-section" id="about">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="eyebrow">لماذا سنابل؟</span>
+        <h2 class="section-title">ما يميزنا</h2>
+        <p class="section-sub">نلتزم بالجودة والخدمة المتميزة في كل طلب</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="why-icon">🌿</div>
+          <h3>مكونات طازجة</h3>
+          <p>نستخدم أجود المكونات الطازجة يومياً لضمان أعلى جودة</p>
+        </div>
+        <div class="why-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="why-icon">⚡</div>
+          <h3>توصيل سريع</h3>
+          <p>وجبتك ساخنة وطازجة تصل لباب بيتك في أسرع وقت</p>
+        </div>
+        <div class="why-card" data-aos="fade-up" data-aos-delay="160">
+          <div class="why-icon">🏆</div>
+          <h3>جودة عالية</h3>
+          <p>معايير جودة صارمة في كل مرحلة من مراحل التحضير</p>
+        </div>
+        <div class="why-card" data-aos="fade-up" data-aos-delay="240">
+          <div class="why-icon">💰</div>
+          <h3>أسعار منافسة</h3>
+          <p>أفضل الأسعار مقارنة بالجودة المقدمة لكل عملائنا</p>
+        </div>
+        <div class="why-card" data-aos="fade-up" data-aos-delay="320">
+          <div class="why-icon">👨‍🍳</div>
+          <h3>طهاة محترفون</h3>
+          <p>فريق من الطهاة المحترفين بخبرة تجاوزت 8 سنوات</p>
+        </div>
+        <div class="why-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="why-icon">💛</div>
+          <h3>خدمة مميزة</h3>
+          <p>فريق خدمة عملاء متاح طوال ساعات العمل لخدمتك</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews-section" id="reviews">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="eyebrow">آراء عملائنا</span>
+        <h2 class="section-title">ثقتكم وسامنا الأول</h2>
+        <p class="section-sub">آراء حقيقية من زبائننا الكرام</p>
+      </div>
+      <div class="reviews-slider">
+        <div class="reviews-track" id="reviewsTrack">
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"أفضل شاورما جربتها بالمنطقة! النكهة رهيبة والتوصيل وصل سريع وساخن."</p>
+            <div class="review-author">
+              <div class="review-avatar">أ</div>
+              <div class="review-info"><strong>أحمد الشهري</strong><span>زبون دائم</span></div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"برجر سنابل المشوي صار وجبتي المفضلة، الجودة ثابتة كل مرة والأسعار مناسبة جداً."</p>
+            <div class="review-author">
+              <div class="review-avatar">س</div>
+              <div class="review-info"><strong>سارة العتيبي</strong><span>زبونة مميزة</span></div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"التعامل عبر واتساب سهل وسريع، والطلب يصل طازج. أنصح به بشدة لكل العائلة."</p>
+            <div class="review-author">
+              <div class="review-avatar">م</div>
+              <div class="review-info"><strong>محمد القرني</strong><span>زبون جديد</span></div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"وجبة العائلة كانت رائعة، الكمية كافية والنكهة لا تُنسى. سنطلب مرة أخرى قريباً."</p>
+            <div class="review-author">
+              <div class="review-avatar">ف</div>
+              <div class="review-info"><strong>فاطمة الزهراني</strong><span>زبونة دائمة</span></div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"الدجاج الحار ممتاز جداً، التتبيلة مميزة ولا مثيل لها. أفضل مطعم في المنطقة."</p>
+            <div class="review-author">
+              <div class="review-avatar">ع</div>
+              <div class="review-info"><strong>عبدالله المالكي</strong><span>زبون متميز</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="reviews-dots" id="reviewsDots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK ORDER -->
+  <section class="order-section" id="contact">
+    <div class="container">
+      <div class="order-inner">
+        <div class="order-text" data-aos="fade-right">
+          <span class="eyebrow">اطلب الآن</span>
+          <h2 class="section-title">طلب سريع عبر واتساب</h2>
+          <p>اختر وجبتك، أدخل بياناتك، وسنوصلها لك في أسرع وقت</p>
+        </div>
+        <div class="order-form" data-aos="fade-left">
+          <div class="form-group">
+            <label>الاسم</label>
+            <input type="text" id="orderName" placeholder="اسمك الكريم" />
+          </div>
+          <div class="form-group">
+            <label>رقم الهاتف</label>
+            <input type="tel" id="orderPhone" placeholder="05xxxxxxxx" />
+          </div>
+          <div class="form-group">
+            <label>اختر الوجبة</label>
+            <select id="orderMeal">
+              <option value="">-- اختر وجبتك --</option>
+              <option>شاورما دجاج - 10 ر.س</option>
+              <option>شاورما لحم - 12 ر.س</option>
+              <option>شاورما مكس - 13 ر.س</option>
+              <option>برجر دجاج - 11 ر.س</option>
+              <option>برجر لحم - 12 ر.س</option>
+              <option>برجر دبل - 16 ر.س</option>
+              <option>دجاج مشوي - 14 ر.س</option>
+              <option>وجبة العائلة - 45 ر.س</option>
+            </select>
+          </div>
+          <button class="btn-primary btn-wa" id="sendOrderBtn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.553 4.122 1.523 5.855L0 24l6.335-1.493A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.371l-.359-.213-3.72.876.942-3.626-.234-.372A9.818 9.818 0 1112 21.818z"/></svg>
+            أرسل الطلب عبر واتساب
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-icon">🌾</div>
+            <div class="logo-text">
+              <span class="logo-ar">سنابل</span>
+              <span class="logo-en">SANAABEL</span>
+            </div>
+          </div>
+          <p>نكهة لا تُنسى في كل لقمة — شاورما، برجر، وأكثر</p>
+        </div>
+        <div class="footer-links">
+          <h4>روابط سريعة</h4>
+          <ul>
+            <li><a href="#menu">القائمة</a></li>
+            <li><a href="#offers">العروض</a></li>
+            <li><a href="#gallery">المعرض</a></li>
+            <li><a href="#reviews">آراء العملاء</a></li>
+            <li><a href="#contact">اطلب الآن</a></li>
+          </ul>
+        </div>
+        <div class="footer-info">
+          <h4>تواصل معنا</h4>
+          <div class="footer-contact">
+            <div class="fc-item">📍 <span>المملكة العربية السعودية</span></div>
+            <div class="fc-item">🕐 <span>يومياً ١٢ ظهراً – ١٢ منتصف الليل</span></div>
+            <div class="fc-item">🚚 <span>توصيل سريع لباب بيتك</span></div>
+          </div>
+          <a href="https://wa.me/966500000000" class="btn-wa-footer" target="_blank">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.553 4.122 1.523 5.855L0 24l6.335-1.493A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.371l-.359-.213-3.72.876.942-3.626-.234-.372A9.818 9.818 0 1112 21.818z"/></svg>
+            واتساب
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 سنابل — جميع الحقوق محفوظة</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING BUTTONS -->
+  <a href="https://wa.me/966500000000" target="_blank" class="float-wa" aria-label="تواصل معنا عبر واتساب">
+    <span class="float-wa-ring"></span>
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.553 4.122 1.523 5.855L0 24l6.335-1.493A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.371l-.359-.213-3.72.876.942-3.626-.234-.372A9.818 9.818 0 1112 21.818z"/></svg>
+  </a>
+  <button class="back-to-top" id="backToTop" aria-label="العودة للأعلى">↑</button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
